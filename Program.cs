@@ -1,6 +1,7 @@
 ﻿namespace Assignment;
 
 using Assignment.MiniCalculator;
+using Assignment.MiniCalculator.CSVToJsonConverter;
 
 class Program
 {
@@ -10,7 +11,7 @@ class Program
             " \n1.Remark Student\n"
                 + "2.Sales With Discount\n"
                 + "3.TacTacToe Game\n"
-                + "4.\n"
+                + "4.CSV To Json Converter\n"
                 + "5.\n"
                 + "6.\n"
                 + "7.\n"
@@ -49,6 +50,7 @@ class Program
                 break;
 
             case 4:
+                CSVToJsonConverter.Start();
                 break;
 
             case 5:
