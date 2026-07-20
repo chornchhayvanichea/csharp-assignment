@@ -54,6 +54,7 @@ class Program
                 break;
 
             case 5:
+                GuessNumber.Game();
                 break;
 
             case 6:
