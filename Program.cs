@@ -13,8 +13,8 @@ class Program
                 + "3.TacTacToe Game\n"
                 + "4.CSV To Json Converter\n"
                 + "5.Guess The Number\n"
-                + "6.\n"
-                + "7.\n"
+                + "6.Random Dice Roller\n"
+                + "7.Temperature Converter\n"
                 + "8.Calculator(Sum,Subtract,Multiply,Divide)\n"
                 + "9.Minibank (Interest Rate)\n"
                 + "10.Eletric Fee\n"
@@ -58,9 +58,75 @@ class Program
                 break;
 
             case 6:
-                break;
+                {
+                    Random random = new Random();
 
+                    Console.WriteLine("===== Random Dice Roller =====");
+                    Console.WriteLine("1. Roll One Die");
+                    Console.WriteLine("2. Roll Two Dice");
+                    Console.Write("Choose: ");
+                    int choice = int.Parse(Console.ReadLine());
+
+                    switch (choice)
+                    {
+                        case 1:
+                            Console.WriteLine("You rolled: " + random.Next(1, 7));
+                            break;
+
+                        case 2:
+                            int die1 = random.Next(1, 7);
+                            int die2 = random.Next(1, 7);
+
+                            Console.WriteLine("Die 1: " + die1);
+                            Console.WriteLine("Die 2: " + die2);
+                            Console.WriteLine("Total : " + (die1 + die2));
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid choice.");
+                            break;
+                    }
+                    break;
+                }
             case 7:
+                {
+                    Console.WriteLine("===== Temperature Converter =====");
+                    Console.WriteLine("1. Celsius to Fahrenheit");
+                    Console.WriteLine("2. Fahrenheit to Celsius");
+                    Console.WriteLine("3. Celsius to Kelvin");
+                    Console.WriteLine("4. Kelvin to Celsius");
+                    Console.Write("Choose: ");
+
+                    int choice = int.Parse(Console.ReadLine());
+
+                    Console.Write("Enter temperature: ");
+                    double temp = double.Parse(Console.ReadLine());
+
+                    switch (choice)
+                    {
+                        case 1:
+                            Console.WriteLine("Result: " + ((temp * 9 / 5) + 32) + " °F");
+                            break;
+
+                        case 2:
+                            Console.WriteLine("Result: " + ((temp - 32) * 5 / 9) + " °C");
+                            break;
+
+                        case 3:
+                            Console.WriteLine("Result: " + (temp + 273.15) + " K");
+                            break;
+
+                        case 4:
+                            Console.WriteLine("Result: " + (temp - 273.15) + " °C");
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid choice.");
+                            break;
+                    }
+
+                    break;
+                }
                 break;
 
             case 8:
